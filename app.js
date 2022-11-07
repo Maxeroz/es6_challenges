@@ -15,16 +15,15 @@
 // Case Insensetive Palidrome
 
 function caseInsensetivePalidrome(str) {
-    // make str caseless
-    const firstString = str.toLowerCase();
-    console.log(firstString);
+    const caseLessString = str.toLowerCase();
+    // const reversedCaseLessString = caseLessString.split("").reverse().join("");
+    let reversedCaseLessString = "";
 
-    // compare it forwards and backwards
-    const newArray = firstString.split("").reverse().join("");
-    console.log(newArray);
-    // return result
-
-    return firstString === newArray;
+    for ( let i = caseLessString.length - 1; i >= 0 ; i--) {
+        reversedCaseLessString += caseLessString[i];
+    }
+    
+    return caseLessString === reversedCaseLessString;
 }
 
-console.log(caseInsensetivePalidrome("aabaa"));
+console.log(caseInsensetivePalidrome("a"))
