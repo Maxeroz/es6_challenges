@@ -14,16 +14,27 @@
 
 // Case Insensetive Palidrome
 
-function caseInsensetivePalidrome(str) {
-    const caseLessString = str.toLowerCase();
+// function caseInsensetivePalidrome(str) {
+//     const caseLessString = str.toLowerCase();
     // const reversedCaseLessString = caseLessString.split("").reverse().join("");
-    let reversedCaseLessString = "";
+//     let reversedCaseLessString = "";
 
-    for ( let i = caseLessString.length - 1; i >= 0 ; i--) {
-        reversedCaseLessString += caseLessString[i];
-    }
+//     for ( let i = caseLessString.length - 1; i >= 0 ; i--) {
+//         reversedCaseLessString += caseLessString[i];
+//     }
     
-    return caseLessString === reversedCaseLessString;
+//     return caseLessString === reversedCaseLessString;
+// }
+
+// console.log(caseInsensetivePalidrome("a"))
+
+// Enclose in Brackets
+
+function encloseInBrackets(str) {
+    const solution1 = `(${str})`;
+    const solution2 = "(" + str + ")";
+    const solution3 = "(".concat(str, ")")
+    console.log(solution1);
 }
 
-console.log(caseInsensetivePalidrome("a"))
+encloseInBrackets("Mother")
